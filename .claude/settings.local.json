@@ -4,7 +4,9 @@
       "Bash(npm install:*)",
       "Bash(mkdir -p ~/Projects/discord-image-dashboard-bot)",
       "Bash(mkdir -p ~/Projects/discord-image-dashboard-client)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(gh project:*)",
+      "Bash(gh api graphql -f query=':*)"
     ]
   }
 }

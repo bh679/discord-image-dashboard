@@ -13,7 +13,9 @@ human oversight at each stage.
 
 - **Project:** Discord Image Dashboard
 - **Live URL:** localhost
-- **Repos:** discord-image-dashboard-bot, discord-image-dashboard-client
+- **Monorepo layout:** Both sub-repos live inside this orchestrator directory and are tracked independently via their own git remotes
+  - `./discord-image-dashboard-bot/` — Discord bot (Node.js)
+  - `./discord-image-dashboard-client/` — Web dashboard (frontend)
 - **GitHub Project:** https://github.com/users/bh679/projects/9 (Project #9)
 - **Wiki:** github.com/bh679/discord-image-dashboard-client/wiki
 
@@ -129,17 +131,22 @@ gh project item-edit --project-id <id> --id <item-id> --field-id <status-field-i
 
 ### Worktree Setup (after Gate 1 approval)
 
+Sub-repos are co-located inside this orchestrator directory. Create worktrees from inside the relevant sub-repo:
+
 ```bash
-# In the sub-repo that needs changes
-git worktree add ../worktrees/discord-image-dashboard-<feature-slug> -b dev/<feature-slug>
-cd ../worktrees/discord-image-dashboard-<feature-slug>
+# cd into the sub-repo that needs changes first
+cd ./discord-image-dashboard-bot   # or discord-image-dashboard-client
+git worktree add ../../worktrees/discord-image-dashboard-<feature-slug> -b dev/<feature-slug>
+cd ../../worktrees/discord-image-dashboard-<feature-slug>
 npm install
 ```
 
 ### Worktree Teardown (after Gate 3 merge)
 
 ```bash
-git worktree remove ../worktrees/discord-image-dashboard-<feature-slug>
+# Run from inside the sub-repo
+cd ./discord-image-dashboard-bot   # or discord-image-dashboard-client
+git worktree remove ../../worktrees/discord-image-dashboard-<feature-slug>
 git branch -d dev/<feature-slug>
 ```
 
