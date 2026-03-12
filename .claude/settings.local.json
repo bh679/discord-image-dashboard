@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(mkdir -p ~/Projects/discord-image-dashboard-bot)",
+      "Bash(mkdir -p ~/Projects/discord-image-dashboard-client)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
