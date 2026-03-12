@@ -14,7 +14,7 @@ human oversight at each stage.
 - **Project:** Discord Image Dashboard
 - **Live URL:** localhost
 - **Repos:** discord-image-dashboard-bot, discord-image-dashboard-client
-- **GitHub Project:** https://github.com/bh679?tab=projects (Project #TBD)
+- **GitHub Project:** https://github.com/users/bh679/projects/9 (Project #9)
 - **Wiki:** github.com/bh679/discord-image-dashboard-client/wiki
 
 ---
@@ -109,7 +109,7 @@ Each session has an immutable UUID and an editable title.
 
 ```bash
 # Find existing item
-gh project item-list TBD --owner bh679 --format json | jq '.items[] | select(.title | test("search term"; "i"))'
+gh project item-list 9 --owner bh679 --format json | jq '.items[] | select(.title | test("search term"; "i"))'
 
 # Update item status
 gh project item-edit --project-id <id> --id <item-id> --field-id <status-field-id> --single-select-option-id <option-id>
