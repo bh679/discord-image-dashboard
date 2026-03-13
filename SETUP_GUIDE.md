@@ -17,9 +17,6 @@ A Discord bot that aggregates all images posted in your server, plus a web dashb
 
 ## Prerequisites
 
-<details>
-<summary>Only needed if not already installed — click to expand</summary>
-
 ### Node.js (v16 or higher)
 
 Check if you have it:
@@ -37,8 +34,6 @@ git --version
 ```
 
 If not installed, download from [git-scm.com](https://git-scm.com).
-
-</details>
 
 ---
 
