@@ -4,6 +4,7 @@
   "description": "Project-level configuration for Discord Image Dashboard. Contains the Product Engineer agent instructions, permissions, and test configuration.",
   "main": "index.js",
   "scripts": {
+    "setup": "bash setup.sh",
     "test": "playwright test",
     "test:report": "playwright show-report"
   },
