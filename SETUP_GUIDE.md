@@ -17,23 +17,21 @@ A Discord bot that aggregates all images posted in your server, plus a web dashb
 
 ## Prerequisites
 
-### Node.js (v16 or higher)
+Install Node.js and Git via [Homebrew](https://brew.sh) (recommended):
 
-Check if you have it:
+```bash
+# Install Homebrew if you don't have it
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Node.js and Git
+brew install node git
+```
+
+Verify:
 ```bash
 node --version
-```
-
-If not installed, download from [nodejs.org](https://nodejs.org) (choose the LTS version).
-
-### Git
-
-Check if you have it:
-```bash
 git --version
 ```
-
-If not installed, download from [git-scm.com](https://git-scm.com).
 
 ---
 
