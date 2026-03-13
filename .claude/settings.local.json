@@ -6,7 +6,11 @@
       "Bash(mkdir -p ~/Projects/discord-image-dashboard-client)",
       "Bash(gh auth:*)",
       "Bash(gh project:*)",
-      "Bash(gh api graphql -f query=':*)"
+      "Bash(gh api graphql -f query=':*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
