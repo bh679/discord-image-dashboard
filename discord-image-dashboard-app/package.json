@@ -1,0 +1,45 @@
+{
+  "name": "discord-image-dashboard-app",
+  "version": "1.00.0000",
+  "description": "Discord Image Dashboard — macOS desktop app",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.bh679.discord-image-dashboard",
+    "productName": "Discord Image Dashboard",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        { "target": "dmg", "arch": ["arm64", "x64"] },
+        { "target": "zip", "arch": ["arm64", "x64"] }
+      ]
+    },
+    "extraResources": [
+      {
+        "from": "../discord-image-dashboard-bot",
+        "to": "discord-image-dashboard-bot",
+        "filter": ["**/*", "!**/.git/**", "!**/node_modules/.cache/**", "!**/.env"]
+      },
+      {
+        "from": "../discord-image-dashboard-client",
+        "to": "discord-image-dashboard-client",
+        "filter": ["**/*", "!**/.git/**", "!**/node_modules/.cache/**"]
+      }
+    ],
+    "files": [
+      "main.js",
+      "preload.js",
+      "settings.html",
+      "assets/**"
+    ]
+  }
+}
