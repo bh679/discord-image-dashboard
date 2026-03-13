@@ -107,8 +107,27 @@ install_git() {
   info "Installing git..."
   case "$OS" in
     macos)
-      ensure_brew
-      brew install git
+      if command -v brew >/dev/null 2>&1; then
+        brew install git
+      else
+        info "Downloading git installer (~30 MB, no Xcode required)..."
+        local GIT_PKG
+        GIT_PKG="$(mktemp /tmp/git-XXXXXX.pkg)"
+        if curl -fsSL \
+            -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)" \
+            -o "$GIT_PKG" \
+            "https://sourceforge.net/projects/git-osx-installer/files/latest/download"; then
+          info "Installing git (requires sudo)..."
+          sudo installer -pkg "$GIT_PKG" -target /
+          rm -f "$GIT_PKG"
+          ok "git installed"
+        else
+          rm -f "$GIT_PKG"
+          fail "Could not download git installer. Install manually (no Xcode needed):"
+          printf "    ${CYAN}https://git-scm.com/download/mac${RESET}\n"
+          exit 1
+        fi
+      fi
       ;;
     debian)
       sudo apt-get update -qq
