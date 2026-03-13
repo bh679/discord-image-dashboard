@@ -1,6 +1,6 @@
 # Discord Image Dashboard — Local Setup Guide
 
-> **Hey Leonie!** You can skip the [Prerequisites](#prerequisites) section — everything is already installed on your machine. Jump straight to [Step 1](#step-1-clone-the-repositories).
+> **Hey Leonie!** In Step 2b, skip creating the `.env` file yourself — get it from Brennan directly.
 
 ---
 
@@ -16,8 +16,6 @@ A Discord bot that aggregates all images posted in your server, plus a web dashb
 ---
 
 ## Prerequisites
-
-> **Hey Leonie — you can skip this entire section. It's already done on your machine.**
 
 <details>
 <summary>Only needed if not already installed — click to expand</summary>
