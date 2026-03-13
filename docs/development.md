@@ -22,6 +22,14 @@ The sub-repos (`discord-image-dashboard-bot`, `discord-image-dashboard-client`) 
 | discord-image-dashboard-bot | Discord bot — listens for image messages and stores them | github.com/bh679/discord-image-dashboard-bot |
 | discord-image-dashboard-client | Web dashboard — displays aggregated images | github.com/bh679/discord-image-dashboard-client |
 
+## Setup
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/bh679/discord-image-dashboard/main/setup.sh | bash
+```
+
+The wizard installs all dependencies, clones sub-repos, walks through Discord credentials, and starts both services.
+
 ## Local Development
 
 ```bash
