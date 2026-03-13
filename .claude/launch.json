@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "discord-image-dashboard-client",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/Users/brennanhatton/Projects/Discord Image Aggrigrator /discord-image-dashboard-client/server.js"],
+      "port": 5002
+    }
+  ]
+}
