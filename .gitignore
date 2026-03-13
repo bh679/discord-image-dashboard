@@ -4,6 +4,7 @@ node_modules/
 test-results/
 playwright-report/
 ports/*.json
+logs/
 
 # Sub-repos — tracked independently via their own git remotes
 discord-image-dashboard-bot/
